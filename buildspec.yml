@@ -3,15 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-
-  install:
-    commands:
-      - apt-get update && apt-get -y install jq python3-pip python3-dev && python3.4 -m pip install Flask
+        - python -m ensurepip --upgrade
+        - python -m pip install Flask
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - python3.4 test_app.py
+      - python test_app.py
   post_build:
     commands:
       - echo Build completed on `date`
