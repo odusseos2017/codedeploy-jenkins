@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-        - wget https://bootstrap.pypa.io/get-pip.py
+        - wget https://bootstrap.pypa.io/pip/3.4/get-pip.py 
         - python3 ./get-pip.py
         - python3 -m pip install flask
   build:
