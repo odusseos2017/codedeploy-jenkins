@@ -6,13 +6,12 @@ phases:
 
   install:
     commands:
-      - export PATH=$PWD/:$PATH
-      - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install Flask
+      - apt-get update && apt-get -y install jq python3-pip python3-dev && python3.4 -m pip install Flask
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - python test_app.py
+      - python3.4 test_app.py
   post_build:
     commands:
       - echo Build completed on `date`
