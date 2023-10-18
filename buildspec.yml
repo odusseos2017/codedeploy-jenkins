@@ -3,7 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
-        - python3.73.73.7 -m pip install Flask
+
+  install:
+    commands:
+      - export PATH=$PWD/:$PATH
+      - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install Flask
   build:
     commands:
       - echo Build started on `date`
